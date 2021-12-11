@@ -26,7 +26,7 @@ header {
 nav {
   position: sticky;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 10vh;
 }
@@ -51,15 +51,20 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  height:0vh;
+transition: height .5s ease-in;
   box-shadow: 1px 1px  1px var(--purple-color);
   background-color: var(--outer-color);
 }
 .navlinks.active{
-    display: none;
-    transition: 1s;
+    height: 20vh;
 }
 ul {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  display: none;
   list-style: none;
 }
 a {
@@ -138,9 +143,6 @@ img[alt="clip"] {
     position: static;
     background-color: transparent;
     box-shadow: 1px 1px 1px transparent;
-  }
-  .navlinks.navlinks.active {
-    display: block;
   }
   .nav {
     margin-right: 5em;
