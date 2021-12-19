@@ -1,0 +1,388 @@
+* {
+  font-family: Poppins;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background: url(new.jpg) right center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 700px) {
+  body {
+    background-position: right top;
+  }
+}
+
+body header {
+  position: relative;
+  top: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 10vh;
+  width: 100%;
+}
+
+body header nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (min-width: 700px) {
+  body header nav {
+    width: 40%;
+  }
+}
+
+body header nav .realmann {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav .realmann .label {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 700px) {
+  body header nav .realmann .label {
+    color: #7e2beb;
+  }
+}
+
+body header nav .realmann .toggle {
+  z-index: 200;
+  background-color: #f2f5fc;
+  position: relative;
+  width: 30px;
+  height: 3px;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+@media (min-width: 700px) {
+  body header nav .realmann .toggle {
+    display: none;
+  }
+}
+
+body header nav .realmann .toggle::before {
+  content: '';
+  position: absolute;
+  top: 200%;
+  width: 30px;
+  height: 3px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background-color: #f2f5fc;
+}
+
+body header nav .realmann .toggle::after {
+  content: '';
+  position: absolute;
+  top: -200%;
+  width: 30px;
+  height: 3px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background-color: #f2f5fc;
+}
+
+body header nav .realmann .toggle.active {
+  background-color: transparent;
+}
+
+body header nav .realmann .toggle.active::before {
+  -webkit-transform: rotate(-45deg) translate(3px, -8px);
+          transform: rotate(-45deg) translate(3px, -8px);
+}
+
+body header nav .realmann .toggle.active::after {
+  -webkit-transform: rotate(45deg) translateY(5px);
+          transform: rotate(45deg) translateY(5px);
+}
+
+body header .navlinks {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7e2beb), to(rgba(7, 87, 134, 0.945)));
+  background: linear-gradient(to bottom, #7e2beb, rgba(7, 87, 134, 0.945));
+  height: 100vh;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+@media (min-width: 700px) {
+  body header .navlinks {
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100%;
+    width: 50%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    background: transparent;
+  }
+}
+
+body header .navlinks.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body header .navlinks .nav {
+  position: absolute;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 50%;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+@media (min-width: 700px) {
+  body header .navlinks .nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    position: static;
+  }
+  body header .navlinks .nav .contact {
+    border: 1.5px solid #f2f5fc;
+    border-radius: 25px;
+  }
+  body header .navlinks .nav .contact:hover {
+    background-color: #7e2beb;
+  }
+}
+
+body header .navlinks .nav.active {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body header .navlinks .nav li {
+  padding: 1.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  body header .navlinks .nav li {
+    margin: 0 2em;
+    padding: .5em;
+  }
+}
+
+body header .navlinks .nav li a {
+  color: #f2f5fc;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 700px) {
+  body header .navlinks .nav li a {
+    font-size: 1.2rem;
+  }
+}
+
+body main {
+  height: 70vh;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 700px) {
+  body main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: calc(100% - 10em);
+  }
+}
+
+body main .body {
+  height: 40%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .body .text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  body main .body .text {
+    font-size: 2.5rem;
+  }
+}
+
+body main .body .tous {
+  background-color: #7e2beb;
+  padding: 1em 2em;
+  color: #f2f5fc;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 700px) {
+  body main .body .tous {
+    border: none;
+    padding: 2em 0.3em;
+    width: 9em;
+    height: 3em;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    font-weight: 300;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: width 0.1s linear;
+    transition: width 0.1s linear;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .body .tous .fa-arrow-right {
+    position: relative;
+    right: -25px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  body main .body .tous .talks {
+    position: relative;
+    left: 7px;
+  }
+  body main .body .tous:hover {
+    background-color: #705fe7;
+    width: 10em;
+  }
+  body main .body .tous:hover .talks {
+    left: -7px;
+  }
+  body main .body .tous:hover .fa-arrow-right {
+    right: 3px;
+  }
+}
+
+body main .body .tous .fa-arrow-right {
+  font-size: 1.2rem;
+  padding-left: .2em;
+}
+
+body main img {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  body main img {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
