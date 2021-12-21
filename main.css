@@ -144,8 +144,10 @@ body header nav .realmann .toggle.active::after {
 
 body header .navlinks {
   position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, from(#7e2beb), to(rgba(7, 87, 134, 0.945)));
-  background: linear-gradient(to bottom, #7e2beb, rgba(7, 87, 134, 0.945));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 87, 134, 0.424)), to(rgba(61, 14, 190, 0.459)));
+  background: linear-gradient(to bottom, rgba(7, 87, 134, 0.424), rgba(61, 14, 190, 0.459));
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   height: 100vh;
   -webkit-transform: translateY(-200%);
           transform: translateY(-200%);
@@ -170,6 +172,8 @@ body header .navlinks {
 @media (min-width: 902px) {
   body header .navlinks {
     position: relative;
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
